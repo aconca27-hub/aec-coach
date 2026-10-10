@@ -23,13 +23,16 @@ Phase 0: scaffold, spec, security rules, agent review pipeline. No application c
 
 ## Repository map
 
-- `docs/PRODUCT.md` — what the app does, user stories, acceptance criteria
-- `docs/ARCHITECTURE.md` — data model, flows, decisions
-- `docs/SECURITY.md` — the rules every contributor and every agent follows
-- `CLAUDE.md` — standing instructions for Claude Code sessions in this repo
-- `.claude/agents/` — reviewer agents (security, implementation, QA) that check each other's work
-- `supabase/migrations/` — schema with RLS policies
-- `.github/workflows/` — CI
+- `docs/PRODUCT.md` - what the app does, user stories, acceptance criteria
+- `docs/ARCHITECTURE.md` - data model, flows, decisions
+- `docs/SECURITY.md` - the rules every contributor and every agent follows
+- `docs/ROADMAP.md` - dependency-ordered phases and how we work each session
+- `docs/PHILOSOPHY.md` - Adolfo's method, structured so each section becomes code or seed data
+- `docs/INTERVIEW.md` - talk track for showing this repo in an interview
+- `CLAUDE.md` - standing instructions for Claude Code sessions in this repo
+- `.claude/agents/` - reviewer agents (security, implementation, QA) that check each other's work
+- `supabase/migrations/` - schema with RLS policies
+- `.github/workflows/` - CI
 
 ## Local setup (once code lands)
 
