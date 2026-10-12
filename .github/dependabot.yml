@@ -1,9 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: "/"
-    schedule: { interval: weekly }
-    open-pull-requests-limit: 5
   - package-ecosystem: github-actions
     directory: "/"
     schedule: { interval: weekly }
+  # npm is added in US-1, when package.json exists.

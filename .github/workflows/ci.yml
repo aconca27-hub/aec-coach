@@ -38,26 +38,5 @@ jobs:
         run: |
           ! grep -nE 'using \(true\)' supabase/migrations/*.sql || { echo "::error::policy using (true) found"; exit 1; }
 
-  app:
-    name: Lint, typecheck, test
-    runs-on: ubuntu-latest
-    if: ${{ hashFiles('package.json') != '' }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 20, cache: npm }
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run typecheck
-      - run: npm test -- --run
-      - run: npm audit --audit-level=high
 
-  codeql:
-    name: CodeQL
-    runs-on: ubuntu-latest
-    if: ${{ hashFiles('package.json') != '' }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: github/codeql-action/init@v3
-        with: { languages: javascript-typescript }
-      - uses: github/codeql-action/analyze@v3
+  # The app, typecheck, test and CodeQL jobs are added in US-1, when package.json exists.
